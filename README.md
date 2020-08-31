@@ -7,7 +7,6 @@ Then insert your credentials and your token will show up!
 
 # Source code:
 ```javascript 
-var fetch = require("node-fetch");
 var rp = require("request-promise")
 var rs = require("readline-sync");
 var colors = require('colors/safe');
