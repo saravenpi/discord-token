@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "request-promise": "latest",
+    "readline-sync": "latest",
+    "colors": "latest"
+  }
+}
