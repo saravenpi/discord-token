@@ -10,8 +10,9 @@ Then insert your credentials and your token will show up!
 var rp = require("request-promise")
 var rs = require("readline-sync");
 var colors = require('colors/safe');
-var email = rs.question("email: ")
-var password = rs.question("password: ")
+var email = rs.question("email: ");
+var password = rs.question("password: ");
+
 var options = {
 body: JSON.stringify({"email": email,"password": password,"undelete":false,"captcha_key":null,"login_source":null,"gift_code_sku_id":null}),
 headers: {
@@ -23,9 +24,11 @@ cookie: '__cfduid=d638ccef388c4ca5a94c97c547c7f0d9e1598555308; __cfruid=4d17c1a9
 method: "POST",
 uri: "https://discord.com/api/v8/auth/login"
 }
+
 rp(options).then(function (body) {
-  var tmtc = JSON.parse(body)
-console.log(colors.green(tmtc.token))
+
+var tmtc = JSON.parse(body)
+console.log( colors.green(tmtc.token) )
 
 });
 ```
